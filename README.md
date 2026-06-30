@@ -42,7 +42,7 @@ Install the following tools before running the project.
 
 ### Required
 
-- **Python 3.11 or 3.12**
+- **Python**
 - **Docker Desktop**
 - **Ollama**
 - **Git** for cloning the repository
@@ -58,8 +58,8 @@ Install the following tools before running the project.
 Clone the repository and open the project folder:
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd free-open-source-agentic-graphrag
+git clone < MY_GITHUB_REPOSITORY_URL >
+cd LocalDoc-GraphRAG
 ```
 
 Create and activate a virtual environment:
@@ -239,102 +239,6 @@ When this happens:
 
 The application includes an extractive fallback for some Ollama timeout cases, but local hardware limits can still affect ingestion and answer generation.
 
-## Recommended Local Settings
-
-The `.env.example` contains MacBook-friendly defaults similar to:
-
-```dotenv
-FAST_MODE=true
-REQUEST_TIMEOUT_SECONDS=180
-GENERATION_MODEL=qwen3:1.7b
-OLLAMA_NUM_CTX=4096
-MAX_OUTPUT_TOKENS=450
-VECTOR_TOP_K=8
-KEYWORD_TOP_K=10
-RERANK_TOP_K=6
-RERANK_CANDIDATE_K=24
-ANSWER_CONTEXT_CHARS=10000
-```
-
-These settings reduce memory use and response time. Larger models and context windows may improve answer quality but require more RAM and processing time.
-
-## Troubleshooting
-
-### Streamlit shows old documents
-
-Confirm that only the desired PDF files remain in `data/`, then restart the application.
-
-If necessary, remove the UI cache:
-
-```bash
-rm -f .cache/streamlit_startup_cache.pkl
-```
-
-### `ModuleNotFoundError: enterprise_graphrag`
-
-Use the launcher:
-
-```bash
-./.venv/bin/python scripts/run_ui.py
-```
-
-Do not start `streamlit_app.py` directly unless `PYTHONPATH` includes the project’s `src/` folder.
-
-### Ollama timeout or server disconnected
-
-Check Ollama:
-
-```bash
-ollama list
-ollama ps
-```
-
-Test the configured model:
-
-```bash
-ollama run qwen3:1.7b "Reply only with OK"
-```
-
-Then restart the application.
-
-### Neo4j is unavailable
-
-Make sure Docker Desktop is open, then run:
-
-```bash
-docker compose up -d
-```
-
-### First query is slow
-
-The first query on a new document may trigger parsing, chunking, embeddings, graph creation, and database storage.
-
-Later queries on the same unchanged document should be faster.
-
-## Stop the Application
-
-Press:
-
-```text
-Control + C
-```
-
-Neo4j data remains persistent in Docker.
-
-To stop Neo4j:
-
-```bash
-docker compose down
-```
-
-Do not run:
-
-```bash
-docker compose down -v
-```
-
-unless you intentionally want to erase the entire Neo4j database.
-
 ## Project Structure
 
 ```text
@@ -352,28 +256,6 @@ free-open-source-agentic-graphrag/
 └── README.md
 ```
 
-## GitHub Safety
-
-Do not commit private, confidential, copyrighted, or employer-owned documents.
-
-The repository should exclude:
-
-```text
-.env
-.venv/
-.cache/
-.model_cache/
-artifacts/
-data/*.pdf
-__pycache__/
-*.pyc
-.DS_Store
-```
-
-Keep `data/.gitkeep` so the empty folder remains in Git.
-
-For public demonstrations, use documents that you are legally allowed to download, process, and redistribute.
-
 ## Accuracy Notes
 
 The application answers questions using the selected documents. It does not independently verify whether a document is current, complete, or legally authoritative.
@@ -389,7 +271,3 @@ Answer quality depends on:
 - Available memory and processing power
 
 Always verify important information against the original source.
-
-## Disclaimer
-
-This application provides educational information from user-supplied documents. It is not a substitute for professional legal, medical, financial, immigration, security, or other regulated advice.
