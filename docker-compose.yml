@@ -1,0 +1,82 @@
+services:
+  neo4j:
+    image: neo4j:2026.05.0
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-change-me-now}
+      HEALTHCHECK_PASSWORD: ${NEO4J_PASSWORD:-change-me-now}
+      NEO4J_server_memory_heap_initial__size: 512M
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512M
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          cypher-shell -u neo4j -p "$${HEALTHCHECK_PASSWORD}"
+          "RETURN 1;" >/dev/null 2>&1 || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  ollama:
+    image: ollama/ollama:0.30.11
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+
+  model-init:
+    image: ollama/ollama:0.30.11
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      GENERATION_MODEL: ${GENERATION_MODEL:-qwen3:1.7b}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - ollama pull "$${GENERATION_MODEL}"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+      NEO4J_URI: bolt://neo4j:7687
+      MODEL_CACHE_DIR: /opt/models
+      ALLOWED_INGESTION_ROOTS: /app/data,/app/sample_data
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./sample_data:/app/sample_data:ro
+      - ./eval:/app/eval:ro
+      - artifacts_data:/app/artifacts
+      - local_models:/opt/models
+    depends_on:
+      neo4j:
+        condition: service_healthy
+      model-init:
+        condition: service_completed_successfully
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  ollama_models:
+  local_models:
+  artifacts_data:

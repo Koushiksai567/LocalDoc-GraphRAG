@@ -1,0 +1,5 @@
+data/immigration/**/*.pdf
+data/immigration/source_manifest.csv
+data/immigration/source_manifest.json
+data/immigration/failed_sources.txt
+!data/immigration/.gitkeep

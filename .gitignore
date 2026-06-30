@@ -1,0 +1,66 @@
+.env
+.env.*
+!.env.example
+!.env.low-resource.example
+
+.venv/
+.model_cache/
+.cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.DS_Store
+
+artifacts/*
+!artifacts/.gitkeep
+
+data/*
+!data/.gitkeep
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local models and application cache
+.cache/
+.model_cache/
+
+# User documents
+data/*
+!data/.gitkeep
+
+# Generated artifacts
+artifacts/*
+!artifacts/.gitkeep
+
+# Build files
+build/
+dist/
+
+# Neo4j local data
+neo4j_data/
+neo4j-data/
+logs/
+
+# macOS
+.DS_Store

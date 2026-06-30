@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "free-open-source-agentic-graphrag"
+version = "3.8.0"
+description = "Fully local open-source Agentic GraphRAG for enterprise technical knowledge"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "Open-Source AI Systems Architecture"}]
+dynamic = ["dependencies"]
+
+[project.scripts]
+graphrag = "enterprise_graphrag.cli:main"
+graphrag-api = "enterprise_graphrag.main:run"
+graphrag-eval = "enterprise_graphrag.evaluation:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+follow_imports = "skip"
+ignore_missing_imports = true
+disallow_subclassing_any = false
+disallow_untyped_decorators = false
+warn_return_any = false
+warn_unused_ignores = true
+show_error_codes = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "USCIS_I765_FORM",
+    "title": "Form I-765, Application for Employment Authorization",
+    "agency": "USCIS",
+    "topic": "OPT and STEM OPT forms",
+    "kind": "pdf",
+    "url": "https://www.uscis.gov/sites/default/files/document/forms/i-765.pdf",
+    "output": "data/immigration/forms/USCIS_Form_I-765.pdf"
+  },
+  {
+    "id": "USCIS_I765_INSTRUCTIONS",
+    "title": "Instructions for Form I-765",
+    "agency": "USCIS",
+    "topic": "OPT and STEM OPT filing instructions",
+    "kind": "pdf",
+    "url": "https://www.uscis.gov/sites/default/files/document/forms/i-765instr.pdf",
+    "output": "data/immigration/forms/USCIS_Form_I-765_Instructions.pdf"
+  },
+  {
+    "id": "ICE_I983_FORM",
+    "title": "Form I-983, Training Plan for STEM OPT Students",
+    "agency": "ICE/SEVP",
+    "topic": "STEM OPT training plan",
+    "kind": "pdf",
+    "url": "https://www.ice.gov/doclib/sevis/pdf/i983.pdf",
+    "output": "data/immigration/stem_opt/ICE_Form_I-983.pdf"
+  },
+  {
+    "id": "ICE_I983_INSTRUCTIONS",
+    "title": "Instructions for Completing Form I-983",
+    "agency": "ICE/SEVP",
+    "topic": "STEM OPT training plan instructions",
+    "kind": "pdf",
+    "url": "https://www.ice.gov/doclib/sevis/pdf/i983Instructions.pdf",
+    "output": "data/immigration/stem_opt/ICE_Form_I-983_Instructions.pdf"
+  },
+  {
+    "id": "USCIS_I129_FORM",
+    "title": "Form I-129, Petition for a Nonimmigrant Worker",
+    "agency": "USCIS",
+    "topic": "H-1B petition form",
+    "kind": "pdf",
+    "url": "https://www.uscis.gov/sites/default/files/document/forms/i-129.pdf",
+    "output": "data/immigration/forms/USCIS_Form_I-129.pdf"
+  },
+  {
+    "id": "USCIS_I129_INSTRUCTIONS",
+    "title": "Instructions for Form I-129",
+    "agency": "USCIS",
+    "topic": "H-1B petition instructions",
+    "kind": "pdf",
+    "url": "https://www.uscis.gov/sites/default/files/document/forms/i-129instr.pdf",
+    "output": "data/immigration/forms/USCIS_Form_I-129_Instructions.pdf"
+  },
+  {
+    "id": "DOL_H1B_62G",
+    "title": "Fact Sheet 62G - H-1B Required Wage",
+    "agency": "U.S. Department of Labor",
+    "topic": "H-1B wages",
+    "kind": "pdf",
+    "url": "https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/whdfs62G.pdf",
+    "output": "data/immigration/h1b_worker_rights/DOL_Fact_Sheet_62G_Required_Wage.pdf"
+  },
+  {
+    "id": "DOL_H1B_62I",
+    "title": "Fact Sheet 62I - H-1B Nonproductive Time",
+    "agency": "U.S. Department of Labor",
+    "topic": "H-1B bench time and pay",
+    "kind": "pdf",
+    "url": "https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/whdfs62I.pdf",
+    "output": "data/immigration/h1b_worker_rights/DOL_Fact_Sheet_62I_Nonproductive_Time.pdf"
+  },
+  {
+    "id": "DOL_H1B_62W",
+    "title": "Fact Sheet 62W - H-1B Portability",
+    "agency": "U.S. Department of Labor",
+    "topic": "H-1B portability",
+    "kind": "pdf",
+    "url": "https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/whdfs62W.pdf",
+    "output": "data/immigration/h1b_worker_rights/DOL_Fact_Sheet_62W_Portability.pdf"
+  },
+  {
+    "id": "DOL_H1B_RIGHTS",
+    "title": "Legal Protections for H-1B Workers",
+    "agency": "U.S. Department of Labor",
+    "topic": "H-1B worker rights",
+    "kind": "pdf",
+    "url": "https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/H1BEnglish.pdf",
+    "output": "data/immigration/h1b_worker_rights/DOL_H1B_Worker_Rights.pdf"
+  },
+  {
+    "id": "ECFR_214_2",
+    "title": "8 CFR 214.2 - Special requirements for admission, extension, and maintenance of status",
+    "agency": "eCFR",
+    "topic": "F-1, CPT, OPT, STEM OPT, cap-gap and H-1B regulations",
+    "kind": "webpage",
+    "url": "https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/subpart-A/section-214.2",
+    "output": "data/immigration/web_snapshots/eCFR_8_CFR_214_2_Current.pdf"
+  },
+  {
+    "id": "ECFR_274A_12",
+    "title": "8 CFR 274a.12 - Classes of aliens authorized to accept employment",
+    "agency": "eCFR",
+    "topic": "Employment authorization classes",
+    "kind": "webpage",
+    "url": "https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-274a/subpart-B/section-274a.12",
+    "output": "data/immigration/web_snapshots/eCFR_8_CFR_274a_12_Current.pdf"
+  },
+  {
+    "id": "USCIS_OPT",
+    "title": "Optional Practical Training (OPT) for F-1 Students",
+    "agency": "USCIS",
+    "topic": "OPT overview",
+    "kind": "webpage",
+    "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students",
+    "output": "data/immigration/web_snapshots/USCIS_OPT_for_F1_Students.pdf"
+  },
+  {
+    "id": "USCIS_STEM_OPT",
+    "title": "Optional Practical Training Extension for STEM Students",
+    "agency": "USCIS",
+    "topic": "STEM OPT extension",
+    "kind": "webpage",
+    "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt",
+    "output": "data/immigration/web_snapshots/USCIS_STEM_OPT_Extension.pdf"
+  },
+  {
+    "id": "USCIS_POLICY_PRACTICAL_TRAINING",
+    "title": "USCIS Policy Manual - Practical Training",
+    "agency": "USCIS",
+    "topic": "CPT, OPT and STEM OPT policy",
+    "kind": "webpage",
+    "url": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
+    "output": "data/immigration/web_snapshots/USCIS_Policy_Manual_Practical_Training.pdf"
+  },
+  {
+    "id": "USCIS_CAP_GAP",
+    "title": "Extension of Post-Completion OPT and F-1 Status for Eligible Students under the Cap-Gap Regulations",
+    "agency": "USCIS",
+    "topic": "Cap-gap",
+    "kind": "webpage",
+    "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/extension-of-post-completion-optional-practical-training-opt-and-f-1-status-for-eligible-students",
+    "output": "data/immigration/web_snapshots/USCIS_Cap_Gap_Guidance.pdf"
+  },
+  {
+    "id": "USCIS_H1B_POLICY",
+    "title": "USCIS Policy Manual - Specialty Occupation Workers",
+    "agency": "USCIS",
+    "topic": "H-1B policy",
+    "kind": "webpage",
+    "url": "https://www.uscis.gov/policy-manual/volume-2-part-h",
+    "output": "data/immigration/web_snapshots/USCIS_Policy_Manual_H1B.pdf"
+  },
+  {
+    "id": "ICE_PRACTICAL_TRAINING",
+    "title": "Practical Training",
+    "agency": "ICE/SEVP",
+    "topic": "CPT, OPT and STEM OPT",
+    "kind": "webpage",
+    "url": "https://www.ice.gov/sevis/practical-training",
+    "output": "data/immigration/web_snapshots/ICE_SEVP_Practical_Training.pdf"
+  },
+  {
+    "id": "DHS_STEM_OPT_HUB",
+    "title": "STEM OPT Hub",
+    "agency": "DHS Study in the States",
+    "topic": "STEM OPT",
+    "kind": "webpage",
+    "url": "https://studyinthestates.dhs.gov/stem-opt-hub",
+    "output": "data/immigration/web_snapshots/DHS_STEM_OPT_Hub.pdf"
+  },
+  {
+    "id": "DOL_H1B_PROGRAM",
+    "title": "H-1B Program",
+    "agency": "U.S. Department of Labor",
+    "topic": "H-1B employer obligations and worker rights",
+    "kind": "webpage",
+    "url": "https://www.dol.gov/agencies/whd/immigration/h1b",
+    "output": "data/immigration/web_snapshots/DOL_H1B_Program.pdf"
+  }
+]
