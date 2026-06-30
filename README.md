@@ -34,7 +34,6 @@ LocalDoc GraphRAG lets you place PDF files in a local folder, select one or more
 6. The retriever finds relevant document sections.
 7. The application returns a grounded response with citations.
 
-Files that have already been indexed are checked using their content hash and are skipped when unchanged.
 
 ## Requirements
 
