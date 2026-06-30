@@ -57,7 +57,7 @@ Install the following tools before running the project.
 Clone the repository and open the project folder:
 
 ```bash
-git clone < MY_GITHUB_REPOSITORY_URL >
+git clone https://github.com/Koushiksai567/LocalDoc-GraphRAG
 cd LocalDoc-GraphRAG
 ```
 
@@ -241,7 +241,7 @@ The application includes an extractive fallback for some Ollama timeout cases, b
 ## Project Structure
 
 ```text
-free-open-source-agentic-graphrag/
+LocalDoc-GraphRAG/
 ├── data/                     # Input PDF files
 ├── scripts/                  # Startup and configuration scripts
 ├── src/
